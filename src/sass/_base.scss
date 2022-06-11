@@ -1,0 +1,47 @@
+html {
+  font-size: 18px;
+  color: $primary;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: $navigation-height-mobile;
+
+  @media (min-width: $resolution-xl) {
+    margin-top: 0;
+  }
+}
+
+body, h1, h2, h3, h4, div, span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 70px 0;
+
+  @media (min-width: $resolution-lg) {
+    padding: 140px 0;
+  }
+}
+
+

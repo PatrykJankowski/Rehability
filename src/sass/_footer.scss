@@ -1,0 +1,41 @@
+.footer {
+  position: relative;
+  padding: 360px 0 20px;
+  background-color: $blue;
+  background-image: url(/wp-content/themes/rehability/img/footer.svg);
+  background-size: cover;
+
+  @media (min-width: $resolution-lg) {
+    margin-top: 0;
+  }
+
+  &__copyright {
+    color: $white;
+    text-align: center;
+
+    @media (min-width: $resolution-lg) {
+      text-align: left;
+    }
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: $m 0;
+    padding: 0;
+
+    @media (min-width: $resolution-lg) {
+      text-align: left;
+      margin: 0;
+    }
+
+    li {
+      margin-right: $s;
+      a {
+        display: block;
+        color: $white;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

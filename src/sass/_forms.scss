@@ -1,0 +1,77 @@
+input[type='text'], input[type='tel'], input[type='email'], textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  @include font-size(16);
+  background: none;
+  color: $black;
+  border: 1px solid $primary;
+  border-radius: 50px;
+  padding: 14px 20px;
+  width: 100%;
+  margin-bottom: $s;
+}
+
+textarea {
+  height: 100px;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #C4C4C4;
+  opacity: 1;
+}
+
+//contact form 7
+.wpcf7-list-item-label {
+  color: $black;
+  @include font-size(14);
+}
+
+.wpcf7-not-valid-tip {
+  color: $red;
+  margin-top: -20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.message .wpcf7-not-valid-tip {
+  margin-bottom: 12px;
+}
+
+.checkbox-49 .wpcf7-not-valid-tip {
+  margin-top: -6px;
+}
+
+.invalid .wpcf7-response-output, .unaccepted .wpcf7-response-output, .failed .wpcf7-response-output {
+  margin-top: 20px;
+  color: $red;
+}
+
+.sent .wpcf7-response-output {
+  margin-top: 20px;
+  color: $green;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-response {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+#acceptance-text {
+  @include font-size(14);
+}

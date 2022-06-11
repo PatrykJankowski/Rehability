@@ -1,0 +1,40 @@
+.faq {
+  h1, h2, h3, h4, h5 {
+    margin: 20px 0;
+  }
+}
+
+.privacy-policy {
+  h2 {
+    margin: 20px 0;
+  }
+}
+
+.phone-image {
+  width: 880px;
+  max-width: calc(100% - 30px);
+
+  @media (min-width: $resolution-xl) {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 60px);
+    transform: translateY(-50%);
+  }
+}
+
+
+.button-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 5px;
+  left: 6px;
+
+  &--white {
+    border-color: $white;
+  }
+}

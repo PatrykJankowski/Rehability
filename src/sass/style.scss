@@ -1,0 +1,30 @@
+/*!
+Theme Name: Rehability
+Theme URI: https://github.com/patrykjankowski/Rehability
+Author: Patryk Jankowski – Softcraft
+Author URI: https://softcraft.pl
+Description: Rehability
+Version: 1.0.0
+Text Domain: Rehability
+*/
+
+//tailwind
+//@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//styles
+@import "variables";
+@import "base";
+@import "grid";
+
+@import "slider";
+@import "card";
+@import "button";
+@import "checkbox";
+@import "forms";
+@import "navigation";
+@import "footer";
+@import "utilities";
+@import "others";
+

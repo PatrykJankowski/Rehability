@@ -1,0 +1,19 @@
+{
+  "name": "rehability",
+  "short_name": "rehability",
+  "icons": [
+    {
+      "src": "/wp-content/themes/rehability/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/wp-content/themes/rehability/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",  "display": "standalone",
+  "background_color": "#6377FE;",
+  "theme_color": "#6377FE;"
+}

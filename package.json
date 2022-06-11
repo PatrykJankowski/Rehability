@@ -1,0 +1,37 @@
+{
+  "name": "rehability",
+  "version": "1.0.0",
+  "description": "Rehability",
+  "main": "''",
+  "dependencies": {
+    "npm": "^8.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^7.0.1",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV='development' gulp dev",
+    "build": "cross-env NODE_ENV='production' gulp css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrykJankowski/Rehability.git"
+  },
+  "author": "Softcraft – Patryk Jankowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrykJankowski/Rehability/issues"
+  },
+  "homepage": "https://github.com/PatrykJankowski/Rehability#readme"
+}
