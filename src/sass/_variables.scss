@@ -24,13 +24,13 @@ $text-color: $black;
 
 
 /* Fonts */
-$text-size: (18rem/16);
+$text-size: (18rem/18);
 
-$h1-size: (52rem/16);
-$h2-size: (36rem/16);
-$h3-size: (36rem/16);
-$h4-size: (24rem/16);
-$h5-size: (18rem/16);
+$h1-size: (52rem/18);
+$h2-size: (36rem/18);
+$h3-size: (36rem/18);
+$h4-size: (24rem/18);
+$h5-size: (18rem/18);
 
 
 /* Resolutions */
@@ -43,5 +43,5 @@ $resolution-xxl: 1480px;
 
 // Mixins
 @mixin font-size($fontSize) {
-    font-size: ($fontSize / 16) + rem;
+    font-size: ($fontSize / 18) + rem;
 }

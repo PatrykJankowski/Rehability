@@ -8,10 +8,10 @@
     @include font-size(24);
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: 0.025em;
 
     @media (min-width: $resolution-lg) {
       @include font-size(52);
-      line-height: 60px;
     }
   }
 
@@ -22,8 +22,7 @@
     color: $white;
 
     @media (min-width: $resolution-lg) {
-      @include font-size(24);
-      line-height: 50px;
+      @include font-size(20);
     }
   }
 

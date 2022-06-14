@@ -68,9 +68,6 @@ span.wpcf7-list-item {
 
 
 
-
-
-
 input[type=checkbox] {
   -moz-appearance:none;
   -webkit-appearance:none;
@@ -84,17 +81,17 @@ input[type=checkbox]:before {
   content: "\2713";
   color: transparent !important;
   display: block;
-  border: 1px solid $primary;
-  border-radius: 5px;
-  height: 26px;
-  width: 26px;
-  font-size: 18px;
+  border: 1px solid $white;
+  border-radius: 2px;
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
   text-align: center;
-  line-height: 24px;
+  line-height: 16px;
 }
 
 input[type=checkbox]:checked:before {
-  color: black !important;
+  color: $white !important;
 }
 
 #acceptance {

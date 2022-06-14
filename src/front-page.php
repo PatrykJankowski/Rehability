@@ -2,36 +2,23 @@
 
 <section class="slider">
     <div class="slideshow-container">
-        <?php if (get_field('slider_img_1')): ?>
-        <div class="slide fade">
-            <img class="slider__img" height="650" src="<?php echo get_field('slider_img_1') ?>" alt="<?php echo get_field('slider_header_1') ?>">
-            <div class="container container-slider">
-                <div class="text">
-                    <h1 class="slider__header"><?php echo get_field('slider_header_1') ?></h1>
-                    <div class="slider__dsc"><?php echo get_field('slider_dsc_1') ?></div>
-                    <?php if (get_field('slider_button_1')): ?>
-                        <a class="button button--arrow-right button--white" href="<?php echo get_field('slider_button_1') ?>"><?php echo get_field('slider_button_dsc_1') ?></a>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
-        <?php endif;?>
-
-        <?php if (get_field('slider_img_2')): ?>
-            <div class="slide fade">
-                <img class="slider__img" height="650" src="<?php echo get_field('slider_img_2') ?>" alt="<?php echo get_field('slider_header_2') ?>">
-                <img class="slider__img-mobile" src="<?php echo get_field('slider_img_mobile_2') ?>" alt="<?php echo get_field('slider_header_2') ?>">
-                <div class="container container-slider">
-                    <div class="text">
-                        <h1 class="slider__header"><?php echo get_field('slider_header_2') ?></h1>
-                        <span class="slider__dsc"><?php echo get_field('slider_dsc_2') ?></span>
-                        <?php if (get_field('slider_button_2')): ?>
-                            <a class="button button--arrow-right button--white" href="<?php echo get_field('slider_button_2') ?>"><?php echo get_field('slider_button_dsc_2') ?></a>
-                        <?php endif; ?>
+        <?php for ($i=1; $i<=3; $i++): ?>
+            <?php $slide = get_field('slide_'.$i); ?>
+            <?php if ($slide['slider_img']): ?>
+                <div class="slide fade">
+                    <img class="slider__img" height="650" src="<?php echo $slide['slider_img'] ?>" alt="<?php echo $slide['slider_header'] ?>">
+                    <div class="container container-slider">
+                        <div class="text">
+                            <div class="slider__dsc"><?php echo $slide['slider_dsc'] ?></div>
+                            <h1 class="slider__header"><?php echo $slide['slider_header'] ?></h1>
+                            <?php if ($slide['slider_button']): ?>
+                                <a class="button button--arrow-right button--green" href="<?php echo $slide['slider_button'] ?>"><?php echo $slide['slider_button_dsc'] ?></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endif; ?>
+            <?php endif;?>
+        <?php endfor; ?>
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

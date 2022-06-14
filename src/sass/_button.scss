@@ -4,7 +4,7 @@
   align-items: center;
   width: 206px;
   height: 56px;
-  border: 2px solid $primary;
+  border: 1px solid $primary;
   border-radius: 30px;
   background: transparent;
   @include font-size(18);
@@ -29,6 +29,17 @@
     }
   }
 
+  &--green {
+    border-color: $green;
+    color: $green;
+
+    &.button--arrow-right {
+      &::after {
+        border-color: $green;
+      }
+    }
+  }
+
   &--full-green {
     border-color: $green;
     background-color: $green;
@@ -45,5 +56,11 @@
       margin-left: 6px;
       transform: rotate(-45deg);
     }
+  }
+
+  &--mail {
+    background-image: url(/wp-content/themes/rehability/img/subscribe.svg);
+    background-repeat: no-repeat;
+    background-position: 30px center;
   }
 }

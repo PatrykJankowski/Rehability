@@ -1,6 +1,6 @@
 body:not(.home) {
   .navbar {
-    background-image: linear-gradient(to right, #46c2ff, #4fbbff, #5db4ff, #6eacff, #80a3ff, #a39ef9, #bf98f0, #d793e4, #ee98cf, #f8a3bf, #f9b0b6, #f4bfb6);
+
   }
 }
 
@@ -20,11 +20,11 @@ body:not(.home) {
   }
 
   &--bg {
-    background-image: linear-gradient(to right, #46c2ff, #4fbbff, #5db4ff, #6eacff, #80a3ff, #a39ef9, #bf98f0, #d793e4, #ee98cf, #f8a3bf, #f9b0b6, #f4bfb6);
+
   }
 
   &--bg-on-toggle {
-    background-image: linear-gradient(to right, #46c2ff, #4fbbff, #5db4ff, #6eacff, #80a3ff, #a39ef9, #bf98f0, #d793e4, #ee98cf, #f8a3bf, #f9b0b6, #f4bfb6);
+
   }
 
   &__logo {
@@ -34,7 +34,6 @@ body:not(.home) {
   &__nav-mobile {
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to right, #46c2ff, #4fbbff, #5db4ff, #6eacff, #80a3ff, #a39ef9, #bf98f0, #d793e4, #ee98cf, #f8a3bf, #f9b0b6, #f4bfb6);
     overflow: hidden;
     height: 0;
     -webkit-transition: all 0.25s ease-in-out;

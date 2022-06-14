@@ -225,43 +225,14 @@
 
 // containers
 
-.h-100 {
-  height: 100%;
-}
-
-.h-min-92-lg {
-  @media (max-width: $resolution-lg - 1px) {
-    min-height: 92px;
-  }
-}
-
-.h-min-70 {
- min-height: 70px;
-}
-
-.h-max-500-h900 {
-  @media (max-height: 899px) {
-    max-height: 600px;
-  }
+.relative {
+  position: relative;
 }
 
 .flex-column-xxl {
   @media (max-width: $resolution-xxl - 1px) {
     flex-direction: column;
   }
-}
-
-
-.fit-content {
-  width: fit-content;
-}
-
-.min-width-46 {
-  min-width: 46px;
-}
-
-.border-primary {
-  border: 1px solid $primary
 }
 
 .text-align-center-lg {
@@ -309,74 +280,24 @@
   @include font-size(20);
 }
 
-.font-size-24 {
-  @include font-size(24);
+.font-size-22 {
+  @include font-size(22);
 }
 
-.font-size-36 {
-  @include font-size(36);
+.font-size-30 {
+  @include font-size(30);
 }
 
-.font-size-122 {
-  @include font-size(122);
+.font-size-38 {
+  @include font-size(38);
 }
+
+
 
 @media (min-width: $resolution-lg) {
-  .font-size-24-lg {
-    @include font-size(24);
+  .font-size-22-lg {
+    @include font-size(22);
   }
-
-  .font-size-36-lg {
-    @include font-size(36);
-  }
-
-  .font-size-40-lg {
-    @include font-size(40);
-  }
-
-  .font-size-50-lg {
-    @include font-size(50);
-  }
-
-  .font-size-198-lg {
-    @include font-size(198);
-  }
-}
-
-.line-height-1 {
-  line-height: 1;
-}
-
-.color-primary {
-  color: $primary;
-}
-
-.color-black {
-  color: $black;
-}
-
-.color-white {
-  color: $white;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.font-style-italic {
-  font-style: italic;
-}
-
-.font-weight-300 {
-  font-weight: 300;
-}
-
-.font-weight-700 {
-  font-weight: 700;
-}
-
-.text-underline {
-  text-decoration: underline;
 }
 
 
@@ -397,9 +318,4 @@
     opacity: 80%;
     background-size: cover;
   }
-}
-
-
-.grecaptcha-badge {
-  display: none !important;
 }
