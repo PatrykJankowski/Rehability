@@ -15,6 +15,13 @@ module.exports = {
       'primary': '#00385B',
       'textColor': '#00385B'
     },
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+      '2xl': '1480px',
+    },
     extend: {},
   },
   plugins: [],

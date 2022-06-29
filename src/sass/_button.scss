@@ -63,4 +63,12 @@
     background-repeat: no-repeat;
     background-position: 30px center;
   }
+
+  &--hidden {
+    display: none;
+
+    @media (min-width: $resolution-xl) {
+      display: flex;
+    }
+  }
 }

@@ -37,7 +37,7 @@
                 <?php wp_nav_menu(array('theme_location' => 'nav-menu-footer', 'container' => false)); ?>
             </div>
             <div class="col-lg-5 text-white">
-                <h2 class="mb-6 font-size-30">Zasubskrybuj newsletter i bądź na bieżąco </h2>
+                <h2 class="mb-6 font-size-22 font-size-30-lg">Zasubskrybuj newsletter i bądź na bieżąco </h2>
                 <?php echo do_shortcode('[mc4wp_form id="72"]'); ?>
             </div>
         </div>
@@ -52,7 +52,6 @@
 <script>
     // mobile menu
     let navOpened = false;
-    let initHeight = 360;
 
     function slideToggle() {
         let navMobile = document.getElementById('navbar__nav-mobile');
@@ -64,7 +63,7 @@
             document.getElementById('header').classList.remove('navbar--bg-on-toggle');
         } else {
             navOpened = true;
-            navMobile.style.height = initHeight + 'px';
+            navMobile.style.height = '100vh';
             document.getElementById('navbar__toggle').classList.add('navbar__toggle--open');
             document.getElementById('header').classList.add('navbar--bg-on-toggle');
         }

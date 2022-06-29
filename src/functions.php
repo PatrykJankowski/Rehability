@@ -12,7 +12,7 @@ function remove_shit() {
     wp_dequeue_script('contact-form-7');
     wp_dequeue_style('contact-form-7');
 
-    wp_deregister_script('jquery');
+    //wp_deregister_script('jquery');
 }
 
 add_action('init', function() {

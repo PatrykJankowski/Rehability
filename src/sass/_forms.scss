@@ -81,6 +81,7 @@ textarea {
   @include font-size(14);
 }
 
+// newsletter
 .mc4wp-response {
   margin-top: 20px;
   @include font-size(16);
@@ -89,4 +90,8 @@ textarea {
 
 .mc4wp-success {
   color: $green;
+}
+
+.mc4wp-error {
+  color: $red;
 }

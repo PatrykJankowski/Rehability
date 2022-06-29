@@ -16,6 +16,7 @@
   }
 
   &__dsc {
+    margin-bottom: $s;
     @include font-size(18);
     font-weight: 300;
     line-height: 1.2;
@@ -28,22 +29,9 @@
 
   &__img {
     width: 100%;
-    display: none;
     z-index: -1;
     object-fit: cover;
-
-    @media (min-width: $resolution-lg) {
-      display: block;
-    }
-  }
-
-  &__img-mobile {
-    display: block;
-    width: 100%;
-
-    @media (min-width: $resolution-lg) {
-      display: none;
-    }
+    object-position: center;
   }
 
   /* Slideshow container */
@@ -69,6 +57,7 @@
       height: 100%;
       background-image: url(/wp-content/themes/rehability/img/hero-bg.webp);
       background-size: cover;
+      background-position: center;
     }
   }
 
@@ -76,27 +65,46 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    //color: $yellow;
-    font-weight: bold;
-    font-size: 18px;
+    bottom: 100px;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 0 14px;
+    color: $white;
+    @include font-size(30);
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border: 2px solid $white;
+    border-radius: 50%;
     user-select: none;
+
+    @media (min-width: $resolution-md) {
+      width: 80px;
+      height: 80px;
+      padding: 16px 0 0 28px;
+    }
   }
 
   /* Position the "next button" to the right */
   .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: calc(50% - 72px);
+
+    @media (min-width: $resolution-md) {
+      right: 20%;
+    }
+  }
+
+  .prev {
+    right: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $resolution-md) {
+      right: calc(20% + 100px);
+      transform: translateX(0);
+    }
   }
 
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(204, 220, 97, 0.6);
   }
 
   /* Caption text */
@@ -107,7 +115,6 @@
     max-width: calc(100% - 60px);
     @include font-size(30);
     line-height: 1.4;
-    font-weight: 600;
     font-family: Spectral, sans-serif;
 
     @media (min-width: 640px) {
@@ -153,18 +160,18 @@
     height: 14px;
     width: 14px;
     margin: 0 10px;
-    border: 1px solid $black;
+    border: 1px solid $white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
 
   .active,  {
-    background-color: $black;
+    background-color: $green;
   }
 
   .dot:hover {
-    background-color: #3A3A3A;
+    background-color: $white;
   }
 
   /* Fading animation */

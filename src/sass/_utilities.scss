@@ -284,6 +284,10 @@
   @include font-size(22);
 }
 
+.font-size-24 {
+  @include font-size(24);
+}
+
 .font-size-30 {
   @include font-size(30);
 }
@@ -293,10 +297,13 @@
 }
 
 
-
 @media (min-width: $resolution-lg) {
-  .font-size-22-lg {
-    @include font-size(22);
+  .font-size-20-lg {
+    @include font-size(20);
+  }
+
+  .font-size-30-lg {
+    @include font-size(30);
   }
 }
 
@@ -317,5 +324,49 @@
     background-image: url(/wp-content/themes/rehability/img/hero-bg.webp);
     opacity: 80%;
     background-size: cover;
+  }
+}
+
+
+
+
+
+.circle {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+
+  @media (min-width: $resolution-md) {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  &::before {
+    content: " ";
+    display: inline-block;
+    border: 1px solid $white;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+
+    @media (min-width: $resolution-md) {
+      top: 20px;
+      left: 18px;
+    }
   }
 }
