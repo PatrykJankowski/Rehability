@@ -369,4 +369,27 @@
       left: 18px;
     }
   }
+
+  &--black {
+    &::before {
+      border-color: $black;
+    }
+
+    &::after {
+      border-color: $black;
+    }
+  }
+
+  &--34 {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+
+    &::after {
+      top: 13px;
+      left: 10px;
+      border-width: 0 1px 1px 0;
+    }
+  }
+
 }
