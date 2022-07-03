@@ -13,6 +13,7 @@ module.exports = {
       'green': '#CCDC61',
       'red': '#c00',
       'grey': '#F9F9F9',
+      'greyDark': '#C4C4C4',
       'primary': '#00385B',
       'textColor': '#00385B'
     },
