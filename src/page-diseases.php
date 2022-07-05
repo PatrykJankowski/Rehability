@@ -8,6 +8,7 @@
         'post_status' => 'publish',
         'orderby' => 'title',
         'order' => 'ASC',
+        'rewrite' => array('slug' => 'portfolio', 'with_front' => false),
     );
 ?>
 

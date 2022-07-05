@@ -12,6 +12,7 @@
         'posts_per_page' => '50',
         'orderby' => 'title',
         'order' => 'ASC',
+        'rewrite' => array('slug' => 'portfolio', 'with_front' => false),
     );
 
     $diseases = new WP_Query( $args );

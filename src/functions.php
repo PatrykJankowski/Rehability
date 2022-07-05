@@ -4,10 +4,10 @@ add_filter( 'wp_enqueue_scripts', 'remove_shit', PHP_INT_MAX );
 
 function remove_shit() {
     wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('contact-form-7' );
+    //wp_dequeue_style('contact-form-7');
 
-    add_filter('wpcf7_load_js', '__return_false');
-    add_filter('wpcf7_load_css', '__return_false');
+    //add_filter('wpcf7_load_js', '__return_false');
+    //add_filter('wpcf7_load_css', '__return_false');
 
     wp_dequeue_script('contact-form-7');
     wp_dequeue_style('contact-form-7');
@@ -25,6 +25,13 @@ add_action('init', function() {
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
     remove_action('admin_print_styles', 'print_emoji_styles');
 }, PHP_INT_MAX - 1 );
+
+
+function re_rewrite_rules() {
+    global $wp_rewrite;
+    $wp_rewrite->pagination_base = 'strona';
+}
+add_action('init', 're_rewrite_rules');
 
 
 /* Enable upload for webp image files */
@@ -77,5 +84,6 @@ function filter_wp_title( $title ) {
     return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 
+
 // remove <p> from the form
-add_filter('wpcf7_autop_or_not', '__return_false');
+//add_filter('wpcf7_autop_or_not', '__return_false');

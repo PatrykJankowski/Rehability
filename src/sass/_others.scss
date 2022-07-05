@@ -178,6 +178,19 @@
   background-size: cover;
 }
 
+
+
+
+
+
+.single-post {
+  p {
+    margin-bottom: $s;
+  }
+}
+
+
+
 .wp-post-image {
   height: 160px;
   object-fit: cover;
