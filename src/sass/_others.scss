@@ -183,16 +183,37 @@
 
 
 
-.single-post {
-  p {
-    margin-bottom: $s;
+
+
+.single {
+  .wp-post-image {
+    height: 160px;
+  }
+
+  &.single-post {
+    p {
+      margin-bottom: $s;
+    }
+
+    .wp-post-image {
+      height: 10rem;
+    }
+  }
+
+  &.single-specjalisci {
+    .wp-post-image {
+      height: 40rem;
+    }
   }
 }
 
-
+.blog {
+  .wp-post-image {
+    height: 160px;
+  }
+}
 
 .wp-post-image {
-  height: 160px;
   object-fit: cover;
 }
 

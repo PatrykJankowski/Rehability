@@ -85,5 +85,41 @@ function filter_wp_title( $title ) {
 }
 
 
+/*
+* COMMENTS
+* Remove comments in its entirety
+*/
+
+// Removes from admin menu
+add_action('admin_menu', 'remove_admin_menus');
+function remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+
+// Removes from post and pages
+add_action('init', 'remove_comment_support', 100);
+function remove_comment_support() {
+    remove_post_type_support('post', 'comments');
+    remove_post_type_support('page', 'comments');
+}
+
+// Removes from admin bar
+add_action('wp_before_admin_bar_render', 'remove_comments_admin_bar');
+function remove_comments_admin_bar() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+
+// Removes from media
+add_filter('comments_open', 'remove_media_comment_status', 10 , 2);
+function remove_media_comment_status($open, $post_id) {
+    $post = get_post($post_id);
+    if($post->post_type == 'attachment') {
+        return false;
+    }
+    return $open;
+}
+
+
 // remove <p> from the form
 //add_filter('wpcf7_autop_or_not', '__return_false');
