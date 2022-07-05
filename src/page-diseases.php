@@ -7,8 +7,7 @@
         'post_type' => 'dolegliwosci',
         'post_status' => 'publish',
         'orderby' => 'title',
-        'order' => 'ASC',
-        'rewrite' => array('slug' => 'portfolio', 'with_front' => false),
+        'order' => 'ASC'
     );
 ?>
 
@@ -27,13 +26,15 @@
     <div class="container">
         <div class="row flex-col-reverse lg:flex-row">
             <div class="col-lg-3 mt-6 lg:mt-0">
-                <?php $diseases = new WP_Query($args + array('posts_per_page' => 50)); ?>
-                <?php if ($diseases->have_posts()): ?>
-                    <?php while ($diseases->have_posts()): $diseases->the_post(); ?>
-                        <a class="flex items-center font-size-20 text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><div class="circle circle--black circle--34 ml-3"></div></a>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-                <?php wp_reset_query(); ?>
+                <ul class="list-none mt-0 pl-0">
+                    <?php $diseases = new WP_Query($args + array('posts_per_page' => 50)); ?>
+                    <?php if ($diseases->have_posts()): ?>
+                        <?php while ($diseases->have_posts()): $diseases->the_post(); ?>
+                            <li><a class="inline-flex items-center font-size-20 text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><span class="circle circle--black circle--34 ml-3"></span></a></li>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_query(); ?>
+                </ul>
             </div>
             <div class="col-lg-9">
                 <div class="row">
