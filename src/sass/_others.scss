@@ -181,7 +181,28 @@
 
 
 
+.content-section {
+  display: flex;
+  flex-direction: column;
 
+  p {
+    margin-bottom: $xs;
+  }
+
+  h2 {
+    margin: 10px 0;
+    @include font-size(24)
+  }
+
+  h3 {
+    margin: 10px 0;
+    @include font-size(20)
+  }
+
+  ul {
+    margin: 0 0 10px;
+  }
+}
 
 
 
@@ -203,6 +224,7 @@
   &.single-specjalisci {
     .wp-post-image {
       height: 40rem;
+      object-position: top;
     }
   }
 }
@@ -212,6 +234,13 @@
     height: 160px;
   }
 }
+
+.page-template-page-team {
+  .wp-post-image {
+    object-position: top;
+  }
+}
+
 
 .wp-post-image {
   object-fit: cover;

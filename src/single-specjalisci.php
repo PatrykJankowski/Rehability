@@ -17,7 +17,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section content-section">
     <div class="container">
         <div class="row">
             <div class="col">

@@ -38,11 +38,11 @@
             </div>
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col">
+                    <div class="col content-section">
                         <?php $disease = new WP_Query($args + array('posts_per_page' => 1)); ?>
                         <?php if ($disease->have_posts()): ?>
                             <?php while ($disease->have_posts()): $disease->the_post(); ?>
-                                <h1 class="mb-2"><?php the_title(); ?></h1>
+                                <h1 class="font-size-38 mb-3"><?php the_title(); ?></h1>
                                 <?php the_content(); ?>
                             <?php endwhile; ?>
                         <?php endif; ?>
