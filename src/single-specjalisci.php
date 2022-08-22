@@ -17,18 +17,22 @@
     </div>
 </section>
 
-<section class="section content-section">
+<section class="section">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <?php while (have_posts()) : the_post(); ?>
-                <article>
-                    <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
-                    <h2 class="mt-3 mb-3"><?php the_title() ?></h2>
-                    <?php the_content(); ?>
-                </article>
-                <?php endwhile; ?>
+            <?php while (have_posts()) : the_post(); ?>
+            <div class="col-lg-4 mb-3">
+                <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
             </div>
+            <div class="col">
+                <article>
+                    <h2 class="mt-0 mb-3"><?php the_title() ?></h2>
+                    <div class="content-section">
+                        <?php the_content(); ?>
+                    </div>
+                </article>
+            </div>
+            <?php endwhile; ?>
         </div>
         <div class="row mt-10">
             <div class="col">

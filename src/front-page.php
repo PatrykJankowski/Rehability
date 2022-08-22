@@ -35,8 +35,10 @@
         <?php endfor; ?>
 
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <?php if (get_field('slide_2')['slider_img']): ?>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <?php endif; ?>
     </div>
 
     <!-- The dots/circles -->

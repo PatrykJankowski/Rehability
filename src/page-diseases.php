@@ -16,7 +16,9 @@
         <div class="row">
             <div class="col">
                 <h1 class="mb-3 font-size-38">Nasz zespół specjalizuję się w różnych dziedzinach Fizjoterapii</h1>
-                <p class="font-size-24">Aliquam auctor ultricies lobortis. Cras imperdiet imperdiet eleifend</p>
+                <?php if(get_field('diseases_subheader')): ?>
+                    <p class="font-size-24"><?php echo get_field('diseases_subheader') ?></p>
+                <?php endif; ?>
             </div>
         </div>
     </div>

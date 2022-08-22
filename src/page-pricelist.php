@@ -1,15 +1,26 @@
-<?php /* Template Name: Oferta */ ?>
+<?php /* Template Name: Cennik */ ?>
 
 <?php get_header(); ?>
 
+<?php
+    $args = array(
+        'post_type' => 'pricelist',
+        'post_status' => 'publish',
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'posts_per_page' => 50
+    );
+?>
+
+<?php $specialists = new WP_Query($args); ?>
 
 <section class="section flex items-center bg-page">
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1 class="mb-3 font-size-38"><?php the_title() ?></h1>
-                <?php if(get_field('offer_subheader')): ?>
-                    <p class="font-size-24"><?php echo get_field('offer_subheader') ?></p>
+                <?php if(get_field('pricelist_subheader')): ?>
+                    <p class="font-size-24"><?php echo get_field('pricelist_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -18,32 +29,10 @@
 
 <section class="section">
     <div class="container">
-
-        <?php $myterms = get_terms('kategorie_ofert', 'orderby=none&hide_empty'); ?>
-
-        <?php foreach ($myterms as $term): ?>
-
-        <h3 class="font-size-38 mb-5"><?php echo $term->name; ?></h3>
-
-            <?php
-                $args = array(
-                    'post_type' => 'oferty',
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'kategorie_ofert',
-                            'field' => 'slug',
-                            'terms' => $term->slug,
-                        )
-                    )
-                );
-
-            $specialists = new WP_Query($args);
-            ?>
-
-            <div class="row">
-                <?php if ($specialists->have_posts()): ?>
+        <div class="row">
+            <?php if ($specialists->have_posts()): ?>
                 <?php while ($specialists->have_posts()): $specialists->the_post(); ?>
-                    <div class="col-lg-4 mb-12">
+                    <div class="col-lg-3 mb-12">
                         <article class="font-size-16 flex flex-col h-[100%]">
                             <?php if (has_post_thumbnail()) : ?>
                                 <div class="flex h-80"><?php the_post_thumbnail(); ?></div>
@@ -59,9 +48,6 @@
             <?php endif; ?>
             <?php wp_reset_query(); ?>
         </div>
-
-        <?php endforeach; ?>
-
     </div>
 </section>
 
