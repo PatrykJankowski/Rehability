@@ -1,0 +1,91 @@
+// wp classes
+
+.wp-post-image {
+  object-fit: cover;
+}
+
+
+// pages
+
+.blog {
+  .wp-post-image {
+    height: 160px;
+  }
+}
+
+.page-template-page-team {
+  .wp-post-image {
+    object-position: top;
+  }
+}
+
+
+// single pages
+
+.single {
+  .wp-post-image {
+    height: 28rem;
+  }
+
+  &.single-post {
+    p {
+      margin-bottom: $s;
+    }
+
+    img {
+      height: auto;
+    }
+
+    .wp-post-image {
+      height: 40rem;
+    }
+  }
+
+  &.single-specjalisci {
+    .wp-post-image {
+      height: 40rem;
+      object-position: top;
+    }
+  }
+}
+
+
+// pagination
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page-numbers {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $text-color;
+  border-radius: 50%;
+  color: $text-color;
+}
+
+.page-numbers.current {
+  background-color: $blueLight;
+}
+
+.page-numbers.prev, .page-numbers.next {
+  font-weight: bold;
+}
+
+.nav-links {
+  a {
+    color: $text-color;
+  }
+
+  .meta-nav {
+    font-weight: bold;
+  }
+
+  .post-title {
+    text-decoration: underline;
+  }
+}

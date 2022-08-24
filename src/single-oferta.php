@@ -20,25 +20,30 @@
     <section class="section content-section">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-lg-7">
                     <?php while (have_posts()) : the_post(); ?>
                         <article>
-                            <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
-                            <h2 class="mb-3"><?php the_title() ?></h2>
+                            <h2><?php the_title() ?></h2>
                             <?php the_content(); ?>
                         </article>
                     <?php endwhile; ?>
+                </div>
+                <div class="col-lg-5">
+                    <div class="inline-flex flex-col sm:flex-row items-center w-full sm:w-auto border-solid border-[1px] rounded-full border-blueLight2 pt-4 pb-4 sm:p-6 mt-8 ">
+                        <h4 class="inline-block sm:mr-6 mb-2 sm:mb-0">Potrzebujesz pomocy?</h4>
+                        <a href="<?php echo get_field('settings_reservation', 2) ?>" target="_blank" class="button button--arrow-right inline-flex">Umów wizytę</a>
+                    </div>
                 </div>
             </div>
             <div class="row mt-10">
                 <div class="col">
                     <?php
                     the_post_navigation( array(
-                        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Następny', 'rehability' ) . '</span> ' .
-                            '<span class="screen-reader-text">' . __( 'Następny post:', 'rehability' ) . '</span> ' .
+                        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Następna usługa:', 'rehability' ) . '</span> ' .
+                            '<span class="screen-reader-text">' . __( 'Następna usługa:', 'rehability' ) . '</span> ' .
                             '<span class="post-title">%title</span>',
-                        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Poprzedni', 'rehability' ) . '</span> ' .
-                            '<span class="screen-reader-text">' . __( 'Poprzedni post:', 'rehability' ) . '</span> ' .
+                        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Poprzednia usługa:', 'rehability' ) . '</span> ' .
+                            '<span class="screen-reader-text">' . __( 'Poprzednia usługa:', 'rehability' ) . '</span> ' .
                             '<span class="post-title">%title</span>',
                     ) ); ?>
                 </div>

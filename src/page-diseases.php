@@ -15,7 +15,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="mb-3 font-size-38">Nasz zespół specjalizuję się w różnych dziedzinach Fizjoterapii</h1>
+                <h1 class="mb-3 font-size-38">
+                    <?php if(get_field('diseases_header')): ?>
+                        <?php echo get_field('diseases_header') ?>
+                    <?php else: ?>
+                        <?php the_title() ?>
+                    <?php endif; ?>
+                </h1>
                 <?php if(get_field('diseases_subheader')): ?>
                     <p class="font-size-24"><?php echo get_field('diseases_subheader') ?></p>
                 <?php endif; ?>
@@ -55,7 +61,7 @@
                     <div class="col flex justify-center sm:justify-start">
                         <div class="inline-flex flex-col sm:flex-row items-center sm:border-solid border-[1px] rounded-full border-blueLight2 md: p-6 mt-8">
                             <h4 class="inline-block sm:mr-6 mb-2 sm:mb-0">Potrzebujesz pomocy?</h4>
-                            <a href="#" class="button button--arrow-right inline-flex">Umów wizytę</a>
+                            <a href="<?php echo get_field('settings_reservation', 2) ?>" class="button button--arrow-right inline-flex">Umów wizytę</a>
                         </div>
                     </div>
                 </div>

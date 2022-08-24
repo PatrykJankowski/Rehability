@@ -56,7 +56,7 @@
                     <div class="col flex justify-center sm:justify-start">
                         <div class="inline-flex flex-col sm:flex-row items-center sm:border-solid border-[1px] rounded-full border-blueLight2 md: p-6 mt-8">
                             <h4 class="inline-block sm:mr-6 mb-2 sm:mb-0">Potrzebujesz pomocy?</h4>
-                            <a href="#" class="button button--arrow-right inline-flex">Umów wizytę</a>
+                            <a href="<?php echo get_field('settings_reservation', 2) ?>" class="button button--arrow-right inline-flex">Umów wizytę</a>
                         </div>
                     </div>
                 </div>

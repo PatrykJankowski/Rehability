@@ -1,62 +1,4 @@
-.faq {
-  h1, h2, h3, h4, h5 {
-    margin: 20px 0;
-  }
-}
-
-.privacy-policy {
-  h2 {
-    margin: 20px 0;
-  }
-}
-
-.phone-image {
-  width: 880px;
-  max-width: calc(100% - 30px);
-
-  @media (min-width: $resolution-xl) {
-    position: absolute;
-    z-index: 1;
-    top: calc(50% + 60px);
-    transform: translateY(-50%);
-  }
-}
-
-
-.button-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  transform: rotate(-45deg);
-  position: relative;
-  top: 5px;
-  left: 6px;
-
-  &--white {
-    border-color: $white;
-  }
-}
-
-
-
-
-.reviews {
-  max-height: 500px;
-  overflow-y: scroll;
-  overflow-x: visible;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.reviews .ti-widget.ti-face .ti-header {
-  display: none;
-}
+// homepage
 
 .d {
   width: 42px;
@@ -167,19 +109,46 @@
 }
 
 
-
 .bg-reviews {
   background: url(/wp-content/themes/rehability/img/bg-reviews.webp);
   background-size: cover;
 }
+
+
+// others
 
 .bg-page {
   background: url(/wp-content/themes/rehability/img/bg-page.webp);
   background-size: cover;
 }
 
+.phone-image {
+  width: 880px;
+  max-width: calc(100% - 30px);
 
+  @media (min-width: $resolution-xl) {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 60px);
+    transform: translateY(-50%);
+  }
+}
 
+.button-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 5px;
+  left: 6px;
+
+  &--white {
+    border-color: $white;
+  }
+}
 
 .content-section {
   display: flex;
@@ -190,8 +159,12 @@
   }
 
   h2 {
-    margin: 10px 0;
-    @include font-size(24)
+    margin: 1rem 0;
+    @include font-size(24);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   h3 {
@@ -202,74 +175,4 @@
   ul {
     margin: 0 0 10px;
   }
-}
-
-
-
-.single {
-  .wp-post-image {
-    height: 160px;
-  }
-
-  &.single-post {
-    p {
-      margin-bottom: $s;
-    }
-
-    img {
-      height: auto;
-    }
-
-    .wp-post-image {
-      height: 10rem;
-    }
-  }
-
-  &.single-specjalisci {
-    .wp-post-image {
-      height: 40rem;
-      object-position: top;
-    }
-  }
-}
-
-.blog {
-  .wp-post-image {
-    height: 160px;
-  }
-}
-
-.page-template-page-team {
-  .wp-post-image {
-    object-position: top;
-  }
-}
-
-
-.wp-post-image {
-  object-fit: cover;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-
-.page-numbers {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid $text-color;
-  border-radius: 50%;
-  color: $text-color;
-}
-
-.page-numbers.current {
-  background-color: $blueLight;
-}
-
-.page-numbers.prev, .page-numbers.next {
-  font-weight: bold;
 }

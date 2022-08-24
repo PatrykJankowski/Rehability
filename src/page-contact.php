@@ -6,7 +6,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="mb-3 font-size-38">Kontakt</h1>
+                <h1 class="mb-3 font-size-38">
+                    <?php if(get_field('contact_header')): ?>
+                        <?php echo get_field('contact_header') ?>
+                    <?php else: ?>
+                        <?php the_title() ?>
+                    <?php endif; ?>
+                </h1>
                 <?php if(get_field('contact_subheader')): ?>
                 <p class="font-size-24"><?php echo get_field('contact_subheader') ?></p>
                 <?php endif; ?>

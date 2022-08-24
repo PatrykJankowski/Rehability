@@ -18,7 +18,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="mb-3 font-size-38"><?php the_title() ?></h1>
+                <h1 class="mb-3 font-size-38">
+                    <?php if(get_field('team_header')): ?>
+                        <?php echo get_field('team_header') ?>
+                    <?php else: ?>
+                        <?php the_title() ?>
+                    <?php endif; ?>
+                </h1>
                 <?php if(get_field('team_subheader')): ?>
                     <p class="font-size-24"><?php echo get_field('team_subheader') ?></p>
                 <?php endif; ?>
@@ -30,6 +36,7 @@
 <section class="section">
     <div class="container">
         <div class="row">
+            <h2 class="mt-6 mb-6">Poznaj nas</h2>
             <?php if ($specialists->have_posts()): ?>
                 <?php while ($specialists->have_posts()): $specialists->the_post(); ?>
                     <div class="col-lg-3 mb-12">

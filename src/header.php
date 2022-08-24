@@ -41,7 +41,7 @@
             <div class="hidden xl:block">
                 <span class="text-green font-bold mr-1">Zadzwoń do nas!</span><a href="tel:+48566567568" class="text-primary">+48 566 567 568</a>
             </div>
-            <a href="https://zarejestrowani.pl/p/apzdL1UGVjUgPqTNTxzJtA/" target="_blank" class="button button--hidden">Umów wizytę</a>
+            <a href="<?php echo get_field('settings_reservation', 2) ?>" target="_blank" class="button button--hidden">Umów wizytę</a>
             <div id="navbar__toggle" class="navbar__toggle" onclick="slideToggle()"><i class="navbar__toggle-icon"></i></div>
         </div>
 
@@ -51,7 +51,7 @@
 
         <nav id="navbar__nav-mobile" class="navbar__nav-mobile">
             <div class="container flex flex-col items-center">
-                <a href="https://zarejestrowani.pl/p/apzdL1UGVjUgPqTNTxzJtA/" target="_blank" class="button mt-6">Umów wizytę</a>
+                <a href="<?php echo get_field('settings_reservation', 2) ?>" target="_blank" class="button mt-6">Umów wizytę</a>
                 <?php wp_nav_menu(array('theme_location' => 'nav-menu', 'container' => false)); ?>
             </div>
         </nav>
