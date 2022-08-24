@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="font-size-38"><?php the_title() ?></h1>
+                <h1 class="font-size-38">Artykuły</h1>
             </div>
         </div>
     </div>
@@ -13,13 +13,19 @@
 <section class="content-section">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col col-xxl-9">
                 <?php while (have_posts()) : the_post(); ?>
                 <article>
-                    <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
-                    <time class="block text-greyDark mt-3 mb-3 "><?php echo apply_filters('the_date', get_the_date()); ?></time>
-                    <h2 class="mb-3"><?php the_title() ?></h2>
-                    <?php the_content(); ?>
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="flex flex-col justify-center flex-1">
+                            <time class="block text-greyDark mb-2 "><?php echo apply_filters('the_date', get_the_date()); ?></time>
+                            <h2 class="mb-3"><?php the_title() ?></h2>
+                        </div>
+                        <div class="flex flex-1 mb-3">
+                            <?php if (has_post_thumbnail()) { the_post_thumbnail(); } ?>
+                        </div>
+                    </div>
+                    <div class="font-light"><?php the_content(); ?></div>
                 </article>
                 <?php endwhile; ?>
             </div>

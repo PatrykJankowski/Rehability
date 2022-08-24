@@ -15,7 +15,7 @@
                     <?php endif; ?>
                 </h1>
                 <?php if(get_field('offer_subheader')): ?>
-                    <p class="font-size-24"><?php echo get_field('offer_subheader') ?></p>
+                    <p class="font-size-24 font-light"><?php echo get_field('offer_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -55,10 +55,10 @@
                                 <div class="flex h-80"><?php the_post_thumbnail(); ?></div>
                             <?php endif; ?>
                             <h4 class="mt-6 mb-6 font-size-24"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="font-bold text-black"><?php the_title(); ?></a></h4>
-                            <div class="font-size-18 text-black flex-1">
+                            <div class="font-size-18 text-black font-light flex-1">
                                 <?php echo wp_trim_words(wp_strip_all_tags(apply_filters('the_content', $specialists->post->post_content)), 30, '...'); ?>
                             </div>
-                            <a class="inline-flex items-center text-black italic mt-3" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Zobacz ofertę <div class="circle circle--black circle--34 ml-3"></div></a>
+                            <a class="inline-flex items-center text-black font-light italic mt-3" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Zobacz ofertę <div class="circle circle--black circle--34 ml-3"></div></a>
                         </article>
                     </div>
                 <?php endwhile; ?>

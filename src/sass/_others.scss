@@ -172,6 +172,10 @@
     @include font-size(20)
   }
 
+  strong {
+    font-weight: 700;
+  }
+
   ul {
     margin: 0 0 10px;
   }

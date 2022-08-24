@@ -26,7 +26,7 @@
                     <?php endif; ?>
                 </h1>
                 <?php if(get_field('pricelist_subheader')): ?>
-                    <p class="font-size-24"><?php echo get_field('pricelist_subheader') ?></p>
+                    <p class="font-size-24 font-light"><?php echo get_field('pricelist_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>

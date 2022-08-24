@@ -81,11 +81,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 flex flex-col justify-center">
-                <h2 class="font-size-38 mb-2"><?php echo get_field('homepage_diseases_header') ?></h2>
-                <h3 class="font-size-38 font-normal mb-12"><?php echo get_field('homepage_diseases_description') ?></h3>
+                <h2 class="font-size-24 lg:text-[2.11111rem] mb-2"><?php echo get_field('homepage_diseases_header') ?></h2>
+                <h3 class="font-size-24 lg:text-[2.11111rem] font-normal mb-12"><?php echo get_field('homepage_diseases_description') ?></h3>
             </div>
             <div class="col-lg-8 relative">
-                <img src="/wp-content/themes/rehability/img/women.webp">
+                <img src="/wp-content/themes/rehability/img/women.webp" alt="Kobieta z zaznaczonymi częściami ciała" width="958" height="806">
                 <a href="#" class="d d--1"></a>
                 <a href="#" class="d d--2"></a>
                 <a href="#" class="d d--3"></a>
@@ -108,8 +108,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3 class="inline-block text-white font-size-24 22 mr-3"><?php echo get_field('homepage_appointment') ?></h3>
-                <a href="<?php echo get_field('settings_reservation', 2) ?>" class="button button--white button--arrow-right inline-flex">Umów wizytę</a>
+                <h3 class="block 2xl:inline-block text-white text-center 2xl:text-left font-size-24 22 mr-3"><?php echo get_field('homepage_appointment') ?></h3>
+                <div class="flex 2xl:inline-flex justify-center 2xl:justify-start">
+                    <a href="<?php echo get_field('settings_reservation', 2) ?>" target="_blank" class="button button--white button--arrow-right inline-flex mt-6 2xl:mt-0">Umów wizytę</a>
+                </div>
             </div>
         </div>
     </div>
@@ -119,8 +121,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 flex flex-col justify-center">
-                <h2 class="font-size-38 mb-2"><?php echo get_field('homepage_reviews_header') ?></h2>
-                <h3 class="font-size-38 font-normal mb-12"><?php echo get_field('homepage_reviews_description') ?></h3>
+                <h2 class="font-size-24 lg:text-[2.11111rem] mb-2"><?php echo get_field('homepage_reviews_header') ?></h2>
+                <h3 class="font-size-24 lg:text-[2.11111rem] font-normal mb-12"><?php echo get_field('homepage_reviews_description') ?></h3>
             </div>
             <div class="col-lg-6 reviews">
                 <?php echo do_shortcode('[trustindex no-registration=facebook]'); ?>
@@ -133,8 +135,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="font-size-38 mb-2"><?php echo get_field('homepage_instagram_header') ?></h2>
-                <h3 class="font-size-38 font-normal mb-12"><?php echo get_field('homepage_instagram_description') ?></h3>
+                <h2 class="font-size-24 lg:text-[2.11111rem] mb-2"><?php echo get_field('homepage_instagram_header') ?></h2>
+                <h3 class="font-size-24 lg:text-[2.11111rem] font-normal mb-12"><?php echo get_field('homepage_instagram_description') ?></h3>
                 <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
             </div>
         </div>

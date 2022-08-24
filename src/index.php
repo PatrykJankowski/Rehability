@@ -19,7 +19,7 @@
             <div class="col">
                 <h1 class="mb-3 font-size-38"><?php single_post_title(); ?></h1>
                 <?php if(get_field('blog_subheader')): ?>
-                    <p class="font-size-24"><?php echo get_field('blog_subheader') ?></p>
+                    <p class="font-size-24 font-light"><?php echo get_field('blog_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -38,10 +38,10 @@
                         <?php endif; ?>
                         <time class="block text-greyDark mt-2"><?php echo apply_filters('the_date', get_the_date()); ?></time>
                         <h4 class="mt-2 mb-1"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="font-bold text-black"><?php the_title(); ?></a></h4>
-                        <div class="text-black flex-1">
+                        <div class="text-black font-light flex-1">
                             <?php echo wp_trim_words(wp_strip_all_tags(apply_filters('the_content', $posts->post->post_content)), 30, '...'); ?>
                         </div>
-                        <a class="inline-flex items-center text-black italic mt-2" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Czytaj <div class="circle circle--black circle--34 ml-3"></div></a>
+                        <a class="inline-flex items-center text-black font-light italic mt-2" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">Czytaj <div class="circle circle--black circle--34 ml-3"></div></a>
                     </article>
                 </div>
                 <?php endwhile; ?>

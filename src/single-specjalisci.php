@@ -27,8 +27,14 @@
             <div class="col">
                 <article>
                     <h2 class="mt-0 mb-3"><?php the_title() ?></h2>
-                    <div class="content-section">
+                    <div class="content-section font-light">
                         <?php the_content(); ?>
+                        <div class="col flex justify-center sm:justify-start">
+                            <div class="inline-flex flex-col sm:flex-row items-center w-full sm:w-auto border-solid border-[1px] rounded-full border-blueLight2 pt-4 pb-4 sm:p-6 mt-8 ">
+                                <h4 class="inline-block sm:mr-6 mb-2 sm:mb-0">Potrzebujesz pomocy?</h4>
+                                <a href="https://zarejestrowani.pl/p/apzdL1UGVjUgPqTNTxzJtA/" target="_blank" class="button button--arrow-right inline-flex">Umów wizytę</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -41,8 +47,8 @@
                     'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Następna osoba:', 'rehability' ) . '</span> ' .
                         '<span class="screen-reader-text">' . __( 'Następna osoba:', 'rehability' ) . '</span> ' .
                         '<span class="post-title">%title</span>',
-                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Poprzedna osoba:', 'rehability' ) . '</span> ' .
-                        '<span class="screen-reader-text">' . __( 'Poprzedna osoba:', 'rehability' ) . '</span> ' .
+                    'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Poprzednia osoba:', 'rehability' ) . '</span> ' .
+                        '<span class="screen-reader-text">' . __( 'Poprzednia osoba:', 'rehability' ) . '</span> ' .
                         '<span class="post-title">%title</span>',
                 ) ); ?>
             </div>

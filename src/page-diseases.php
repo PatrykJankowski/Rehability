@@ -23,7 +23,7 @@
                     <?php endif; ?>
                 </h1>
                 <?php if(get_field('diseases_subheader')): ?>
-                    <p class="font-size-24"><?php echo get_field('diseases_subheader') ?></p>
+                    <p class="font-size-24 font-light"><?php echo get_field('diseases_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <?php $diseases = new WP_Query($args + array('posts_per_page' => 50)); ?>
                     <?php if ($diseases->have_posts()): ?>
                         <?php while ($diseases->have_posts()): $diseases->the_post(); ?>
-                            <li><a class="inline-flex items-center font-size-20 text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><span class="circle circle--black circle--34 ml-3"></span></a></li>
+                            <li><a class="inline-flex items-center font-size-20 font-light text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><span class="circle circle--black circle--34 ml-3"></span></a></li>
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
@@ -51,7 +51,7 @@
                         <?php if ($disease->have_posts()): ?>
                             <?php while ($disease->have_posts()): $disease->the_post(); ?>
                                 <h1 class="font-size-38 mb-3"><?php the_title(); ?></h1>
-                                <?php the_content(); ?>
+                                <div class="font-light"><?php the_content(); ?></div>
                             <?php endwhile; ?>
                         <?php endif; ?>
                         <?php wp_reset_query(); ?>

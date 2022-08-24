@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                 <h1 class="mb-3 font-size-38">Nasz zespół specjalizuję się w różnych dziedzinach Fizjoterapii</h1>
-                <p class="font-size-24">Aliquam auctor ultricies lobortis. Cras imperdiet imperdiet eleifend</p>
+                <p class="font-size-24 font-light">Aliquam auctor ultricies lobortis. Cras imperdiet imperdiet eleifend</p>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
                 <ul class="list-none mt-0 pl-0">
                     <?php if ($diseases->have_posts()): ?>
                         <?php while ($diseases->have_posts()): $diseases->the_post(); ?>
-                            <li><a class="inline-flex items-center font-size-20 text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><span class="circle circle--black circle--34 ml-3"></span></a></li>
+                            <li><a class="inline-flex items-center font-size-20 font-light text-black mb-5" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><span class="circle circle--black circle--34 ml-3"></span></a></li>
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
@@ -48,7 +48,7 @@
                     <div class="col content-section">
                     <?php while (have_posts()) : the_post(); ?>
                         <h1 class="font-size-38 mb-3"><?php the_title(); ?></h1>
-                        <?php the_content(); ?>
+                        <div class="font-light"><?php the_content(); ?></div>
                     <?php endwhile; ?>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
                     <?php endif; ?>
                 </h1>
                 <?php if(get_field('contact_subheader')): ?>
-                <p class="font-size-24"><?php echo get_field('contact_subheader') ?></p>
+                <p class="font-size-24 font-light"><?php echo get_field('contact_subheader') ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 </div>
 
                 <h2 class="font-size-24 mt-12 mb-6"><?php echo get_field('contact_header_2') ?></h2>
-                <?php echo get_field('contact_hours') ?>
+                <div class="font-light"><?php echo get_field('contact_hours') ?></div>
             </div>
 
             <div class="col-lg-7">

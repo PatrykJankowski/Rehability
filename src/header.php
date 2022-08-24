@@ -15,8 +15,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
     <?php wp_head(); ?>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,7 +36,7 @@
     <div class="container d-flex flex-column">
         <div class="xl:h-28 flex items-center space-x-10 text-sm font-medium">
             <a class="flex mr-auto" href="/" title="rehability" aria-label="rehability">
-                <img src="/wp-content/themes/rehability/img/logo.webp" class="navbar__logo">
+                <img src="/wp-content/themes/rehability/img/logo.webp" width="250" height="80" class="navbar__logo">
             </a>
             <div class="hidden xl:block">
                 <span class="text-green font-bold mr-1">Zadzwoń do nas!</span><a href="tel:+48566567568" class="text-primary">+48 566 567 568</a>
