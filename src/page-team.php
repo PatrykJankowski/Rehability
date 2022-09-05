@@ -6,7 +6,7 @@
     $args = array(
         'post_type' => 'specjalisci',
         'post_status' => 'publish',
-        'orderby' => 'title',
+        'orderby' => 'date',
         'order' => 'ASC',
         'posts_per_page' => 50
     );

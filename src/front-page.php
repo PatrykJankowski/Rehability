@@ -86,25 +86,36 @@
             </div>
             <div class="col-lg-8 relative">
                 <img src="/wp-content/themes/rehability/img/women.webp" alt="Kobieta z zaznaczonymi częściami ciała" width="958" height="806">
-                <a href="#" class="d d--1"></a>
-                <a href="#" class="d d--2"></a>
-                <a href="#" class="d d--3"></a>
-                <a href="#" class="d d--4"></a>
-                <a href="#" class="d d--5"></a>
-                <a href="#" class="d d--6"></a>
-                <a href="#" class="d d--7"></a>
-                <a href="#" class="d d--8"></a>
-                <a href="#" class="d d--9"></a>
-                <a href="#" class="d d--10"></a>
-                <a href="#" class="d d--11"></a>
-                <a href="#" class="d d--12"></a>
-                <a href="#" class="d d--13"></a>
+                <a href="/dolegliwosci/bol-glowy" title="Ból głowy" class="d d--1"></a>
+                <a href="/dolegliwosci/bol-zuchwy" title="Ból żuchwy" class="d d--2"></a>
+                <a href="/dolegliwosci/bol-karku" title="Ból karku" class="d d--3"></a>
+                <a href="/dolegliwosci/bol-ramion" title="Ból ramion" class="d d--4"></a>
+                <a href="/dolegliwosci/bol-lokcia" title="Ból łokcia" class="d d--5"></a>
+                <a href="/dolegliwosci/bol-dloni-i-nadgarstkow" title="Ból dłoni i nadgarstków" class="d d--6"></a>
+                <a href="/dolegliwosci/bol-plecow" title="Ból pleców" class="d d--7"></a>
+                <a href="/dolegliwosci/bol-klatki" title="Ból klatki" class="d d--8"></a>
+                <a href="/dolegliwosci/bol-kolan" title="Ból kolan" class="d d--9"></a>
+                <a href="/dolegliwosci/bol-bioder" title="Ból bioder" class="d d--10"></a>
+                <a href="/dolegliwosci/bol-uda" title="Ból uda" class="d d--11"></a>
+                <a href="/dolegliwosci/bol-lydek-i-piszczeli" title="Ból łydek i piszczeli" class="d d--12"></a>
+                <a href="/dolegliwosci/bol-kostki-i-stopy" title="Ból kostki i stopy" class="d d--13"></a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section bg-primary text-blueLight">
+<section class="section bg-offer">
+    <div class="container">
+        <div class="row">
+            <div class="col flex flex-col items-center">
+                <h3 class="text-center font-size-24 lg:text-[2.11111rem] font-bold 22 mr-3"><?php echo get_field('homepage_offer_header') ?></h3>
+                <a href="/oferty" class="button button--arrow-right inline-flex mt-6">Zobacz ofertę</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-primary">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -137,7 +148,7 @@
             <div class="col">
                 <h2 class="font-size-24 lg:text-[2.11111rem] mb-2"><?php echo get_field('homepage_instagram_header') ?></h2>
                 <h3 class="font-size-24 lg:text-[2.11111rem] font-normal mb-12"><?php echo get_field('homepage_instagram_description') ?></h3>
-                <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+                <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
             </div>
         </div>
     </div>

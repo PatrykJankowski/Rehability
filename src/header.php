@@ -39,7 +39,7 @@
                 <img src="/wp-content/themes/rehability/img/logo.webp" width="250" height="80" class="navbar__logo">
             </a>
             <div class="hidden xl:block">
-                <span class="text-green font-bold mr-1">Zadzwoń do nas!</span><a href="tel:+48566567568" class="text-primary">+48 566 567 568</a>
+                <span class="text-green font-bold mr-1">Zadzwoń do nas!</span><a href="tel:<?php echo preg_replace('/\s+/', '', get_field('contact_phone', 2)); ?>" class="text-primary"><?php echo get_field('contact_phone', 2) ?></a>
             </div>
             <a href="<?php echo get_field('settings_reservation', 2) ?>" target="_blank" class="button button--hidden">Umów wizytę</a>
             <div id="navbar__toggle" class="navbar__toggle" onclick="slideToggle()"><i class="navbar__toggle-icon"></i></div>

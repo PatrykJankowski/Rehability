@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                 <h1 class="mb-3 font-size-38">Nasz zespół specjalizuję się w różnych dziedzinach Fizjoterapii</h1>
-                <p class="font-size-24 font-light">Aliquam auctor ultricies lobortis. Cras imperdiet imperdiet eleifend</p>
+                <!--<p class="font-size-24 font-light"></p>-->
             </div>
         </div>
     </div>
