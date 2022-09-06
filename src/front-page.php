@@ -104,7 +104,7 @@
     </div>
 </section>
 
-<section class="section bg-offer">
+<section class="section" style="background-image: url(<?php echo get_field('homepage_offer_bg') ?>); background-size: cover">
     <div class="container">
         <div class="row">
             <div class="col flex flex-col items-center">

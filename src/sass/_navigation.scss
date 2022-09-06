@@ -33,6 +33,7 @@ body:not(.home) {
   &__logo {
     display: flex;
     height: 60px;
+    width: 100%;
 
     @media (min-width: $resolution-xl) {
       height: 80px;
