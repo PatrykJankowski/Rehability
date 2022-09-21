@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-<section class="pt-16 pb-16 flex items-center bg-page">
+<section class="pt-16 pb-16 flex items-center bg-page" style="background-color: <?php echo get_field('settings_banner_color', 2) ?>">
     <div class="container">
         <div class="row">
             <div class="col">

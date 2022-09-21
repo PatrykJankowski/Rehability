@@ -181,7 +181,10 @@
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "flex";
-        dots[slideIndex-1].className += " active";
+        if(dots[0]) {
+            dots[slideIndex-1].className += " active";
+        }
+
     }
 </script>
 
