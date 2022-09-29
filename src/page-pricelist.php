@@ -54,7 +54,7 @@
                         <?php while ($specialists->have_posts()): $specialists->the_post(); ?>
                             <div class="col-12 mb-3">
                                 <article class="font-size-16 flex flex-col h-[100%]">
-                                    <h4 class="mt-3 mb-3 font-size-18"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="font-bold text-black"><?php the_title(); ?></a></h4>
+                                    <h4 class="mt-3 mb-3 font-size-18 font-bold"><?php the_title(); ?></h4>
                                     <div class="font-size-18 text-black font-light flex pb-1 border-solid border-0 border-b-[1px] border-black">
                                         <div class="flex-1"><?php echo get_field('pricelist_time') ?></div>
                                         <div><?php echo get_field('pricelist_price') ?></div>
